@@ -1,6 +1,99 @@
-body{
+:root{
+    --primary: #FFFFB3;
+    --secondary: #6A381F;
+    --complimentary0: #6E0D25;
+    --complimentary1: #719E2F;
+}
+
+*{
     margin: 0;
     padding: 0;
+}
+
+body{
     box-sizing: border-box;
-    background-color: #FFFFB3;
+    background-color: var(--primary);
+    min-height: 100vh;
+}
+
+/* Nav bar */
+
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+    height: 4.8rem;
+    padding: 1rem 0;
+    font-family: Gilda Display,'Times New Roman', Times, serif;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: var(--primary);
+    height: 100%;
+    padding: 4rem;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+#sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    width: 25rem;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    gap: 10px;
+}
+#sidebar li{
+    padding: 1rem 0;
+}
+
+#Log0{
+    width: 100%;
+    max-width: 120px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width: 900px) {
+    .hideonmobile{
+        display: none;
+    }
+}
+
+@media(min-width: 900px) {
+    .hideondesktop{
+        display: none;
+    }
+
+     
+}
+
+@media(max-width:500px){
+    #sidebar{
+        width: 100%;
+    }
+    nav a{
+        padding: 2rem;
+    }
+
 }

@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Gilda+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <nav>
+        <ul id="sidebar">
+            <li onclick=hideSidebar()><a href="#"><img src="images/cross.png" style="height: 26px;" alt="close button"></a></li>
+            <li><a onclick=hideSidebar() href="#home">Amenities</a></li>
+            <li><a onclick=hideSidebar() href="#menu">Menu</a></li>
+            <li><a onclick=hideSidebar() href="#about">About</a></li>
+        </ul>
+        <ul>
+            <li><a href="#"><img src="images/Log0.png" alt="The Velvet Bean" id="Log0"></a></li>
+            <li class="hideonmobile"><a href="#">Amenities</a></li>
+            <li class="hideonmobile"><a href="#">Menu</a></li>
+            <li class="hideonmobile"><a href="#">About</a></li>
+            <li class="hideondesktop" onclick=showSidebar()><a href="#"><img src="images/interface.png" alt="menu" style="height: 26px;"></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.display='flex'
+        }
+
+         function hideSidebar(){
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.display='none'
+        }
+    </script>
 </body>
 </html>

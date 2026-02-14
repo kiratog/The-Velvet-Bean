@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Gilda+Display&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <ul id="sidebar" class="backdrop-blur">
             <li onclick=hideSidebar()><a href="#"><img src="images/cross.png" style="height: 26px;" alt="close button"></a></li>
-            <li><a onclick=hideSidebar() href="#home">Amenities</a></li>
+            <li><a onclick=hideSidebar() href="#amenities-s">Amenities</a></li>
             <li><a onclick=hideSidebar() href="#menu">Menu</a></li>
             <li><a onclick=hideSidebar() href="#about">About</a></li>
         </ul>
         <ul>
             <li><a href="#"><img src="images/Log0.png" alt="The Velvet Bean" id="Log0"></a></li>
-            <li class="hideonmobile"><a href="#">Amenities</a></li>
-            <li class="hideonmobile"><a href="#">Menu</a></li>
-            <li class="hideonmobile"><a href="#">About</a></li>
+            <li class="hideonmobile"><a href="#amenities-s">Amenities</a></li>
+            <li class="hideonmobile"><a href="#menu">Menu</a></li>
+            <li class="hideonmobile"><a href="#about">About</a></li>
             <li class="hideondesktop" onclick=showSidebar()><a href="#"><img src="images/interface.png" alt="menu" style="height: 26px;"></a></li>
         </ul>
     </nav>
@@ -36,7 +36,7 @@
     </header>
     
 
-    <section>
+    <section id="amenities-s">
         <h2 class="sub-heading">Amenities</h2>
         <div class="container">
         <div class="img-container">
@@ -50,9 +50,99 @@
         </ul>
         </div>
     </section>
-    <section>
-        <h2 class="sub-heading">Amenities</h2>
+    <section id="menu">
+        <h2 class="sub-heading">Popular Menu</h2>
+        <div class="carousel">
+            <div class="menu-container">
+            <div class="item">
+                <div class="item-image">
+                    <img src="images/image3.webp" alt="Chai">
+                </div>
+                <p class="regular-l">Chai</p>
+                <p class="regular-l">$12</p>
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img src="images/image3.webp" alt="Chai">
+                </div>
+                <p class="regular-l">Allam Chai</p>
+                <p class="regular-l">$12</p>
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img src="images/image3.webp" alt="Chai">
+                </div>
+                <p class="regular-l">Allam Chai</p>
+                <p class="regular-l">$12</p>
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img src="images/image3.webp" alt="Chai">
+                </div>
+                <p class="regular-l">Allam Chai</p>
+                <p class="regular-l">$12</p>
+            </div>
+        </div>
+
+        <div aria-hidden="true" class="menu-container">
+            <div class="item">
+                <div class="item-image">
+                    <img src="images/image3.webp" alt="Chai">
+                </div>
+                <p class="regular-l">Chai</p>
+                <p class="regular-l">$12</p>
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img src="images/image3.webp" alt="Chai">
+                </div>
+                <p class="regular-l">Allam Chai</p>
+                <p class="regular-l">$12</p>
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img src="images/image3.webp" alt="Chai">
+                </div>
+                <p class="regular-l">Allam Chai</p>
+                <p class="regular-l">$12</p>
+            </div>
+            <div class="item">
+                <div class="item-image">
+                    <img src="images/image3.webp" alt="Chai">
+                </div>
+                <p class="regular-l">Allam Chai</p>
+                <p class="regular-l">$12</p>
+            </div>
+        </div>
+
+        </div>
+        
     </section>
+    <section id="location">
+        <h2 class="sub-heading">Location</h2>
+        <div class="container">
+            <p class="regular-l" id="address">
+                The Velvet Bean<br>1422-Copperworks Alley<br>Steampunk District<br>Oakhaven, NY 10012
+            </p>
+        <div class="img-container">
+            <img class="image2" src="images/image4.webp" alt="People working by enjoying coffee in The Velvet Bean">
+        </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="sub-heading">About</h2>
+        <div class="about">
+            <p class="regular">
+                The Heart of Your Daily Grind At The Velvet Bean, we believe that the best conversations happen over a perfectly poured cup. Nestled in the heart of the neighborhood, we didn't just set out to open a cafe; we wanted to create a sanctuary. Whether you're here to conquer your to-do list with our high-speed Wi-Fi, sink into a velvet couch with a good book, or catch up with an old friend, our space is your space. We source our beans ethically, roast them locally, and serve them with a smile—every single time.
+            </p>
+            <a href="#location" class="btn">Visit Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <p class="regular">&copy;2026 The Velvet Bean. All rights brewed.</p>
+    </footer>
 
     <script>
         function showSidebar(){

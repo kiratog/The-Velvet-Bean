@@ -12,7 +12,12 @@
 
 body{
     background-color: var(--primary);
-    min-height: 300vh;
+    font-family: inter,Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3{
+    font-family: Unbounded, Arial, Helvetica, sans-serif;
 }
 
 /* Nav bar */
@@ -23,7 +28,6 @@ nav{
     right: 0;
     left: 0;
     height: 5.8rem;
-    font-family: Gilda Display,'Times New Roman', Times, serif;
     border-bottom: 1px solid var(--complimentary1);
     z-index: 999;
     
@@ -92,15 +96,16 @@ header{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    padding: 0 4rem;
+    padding: 0rem 4rem;
     justify-content: center;
     gap: 2rem;
 }
 
 header h1{
-    font-family: DM Serif Display,'Times New Roman', Times, serif ;
+    margin-top: 6rem;
     color: var(--primary);
-    font-size: 8rem;
+    font-size: 5rem;
+    font-weight:bold;
     line-height: 6.25rem;
     text-shadow:1px 2px  var(--complimentary1);
     max-width: 38rem;
@@ -110,6 +115,7 @@ header h1{
 header p{
     animation: fade2 0.8s linear;
     color: var(--primary);
+    max-width: 38rem;
 }
 
 /* Sections */
@@ -118,6 +124,8 @@ header p{
     display: flex;
     padding: 0 4rem;
     gap: 4rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-container {
@@ -152,22 +160,124 @@ header p{
     animation: appear linear both;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+    max-width: 38rem;
+}
+
+/* Popular menu */
+
+.carousel{
+    display: flex;
+    overflow: auto;
+}
+
+.menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 2rem;
+    animation: scroll-horizontal 10s linear infinite
+}
+
+.item{
+    height: 26.25rem;
+    width: 20.5rem;
+    background-color: var(--complimentary1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.item p{
+    align-self: flex-start;
+    color: var(--primary);
+
+}
+
+.item-image{
+    width: 100%;
+    height: 16rem; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item-image img{
+    width: 100%; 
+    height: 100%;           
+    object-fit: cover; 
+    object-position: center;
+}
+
+/* Location */
+#address{
+    text-align: right;
+    color: var(--secondary);
+    animation: fadeup both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+}
+/* About */
+
+.about{
+    min-height: 28rem;
+    background-image: url(images/image5.webp);
+    background-color: #6a381f88;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    gap:4rem;
+    padding: 6rem 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #6a381f66;
+    position: absolute;
+    z-index: -1;
+}
+
+.about p{
+    z-index: 101;
+    color: var(--primary);
+}
+/*Footer*/
+
+footer{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Utilities */
 .sub-heading{
     text-align: center;
     margin: 4rem;
-    font-family: DM serif Display,'Times New Roman', Times, serif;
     color: var(--secondary);
     font-size: 3rem;
     font-weight: lighter;
 }
-.regular{
-    font-family: Gilda Display,'Times New Roman', Times, serif;
+.regular-l{
     max-width: 38rem;
+    font-size: 3rem;
+    font-weight: 300;
+}
+.regular{
     font-size: 1.5rem;
-    font-weight: 100;
+    font-weight: 200;
 }
 .btn{
     background-color: var(--complimentary1);
@@ -188,6 +298,7 @@ header p{
     transform: translate(8px,8px);
     box-shadow: none;
 }
+
 
 /* Animations */
 @keyframes fade {
@@ -232,6 +343,26 @@ header p{
     }
 }
 
+@keyframes scroll-horizontal {
+    from{
+        translate: 0;
+    }
+    to{
+        translate: -100%;
+    }
+}
+
+@keyframes fadeup {
+    from{
+        opacity: 0;
+        transform: translateY(10px) scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
 /* media quaries */
 
 @media(max-width: 999px) {
@@ -247,6 +378,9 @@ header p{
     #amenities{
         height: 30rem;
     }
+    #address{
+        text-align: center;
+    }
 }
 
 @media(min-width: 999px) {
@@ -255,7 +389,8 @@ header p{
     }
 }
 
-@media(max-width:500px){
+
+@media(max-width:600px){
     #sidebar{
         width: 100%;
     }

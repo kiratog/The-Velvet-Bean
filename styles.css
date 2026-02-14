@@ -282,7 +282,7 @@ footer{
 }
 .btn{
     background-color: var(--complimentary1);
-    height: 7vh;
+    height: max(3rem,7vh);
     width: clamp(5rem,17.5rem,30vw);
     display: flex;
     justify-content: center;

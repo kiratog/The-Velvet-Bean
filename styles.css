@@ -5,6 +5,10 @@
     --complimentary1: #719E2F;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
